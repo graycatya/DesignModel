@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/qtwork/DesignModel/Behavior_model/State/Context.h
+
+D:/qtwork/DesignModel/Behavior_model/State/State.cpp
+State.h
+D:/qtwork/DesignModel/Behavior_model/State/State.h
+Context.h
+D:/qtwork/DesignModel/Behavior_model/State/Context.h
+
+D:/qtwork/DesignModel/Behavior_model/State/State.h
+iostream
+-
+

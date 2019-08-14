@@ -1,0 +1,3 @@
+D:/qtwork/DesignModel/Creational/Proxy/CMakeFiles/Proxy.dir
+D:/qtwork/DesignModel/Creational/Proxy/CMakeFiles/edit_cache.dir
+D:/qtwork/DesignModel/Creational/Proxy/CMakeFiles/rebuild_cache.dir

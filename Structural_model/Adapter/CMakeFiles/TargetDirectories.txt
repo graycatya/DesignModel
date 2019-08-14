@@ -1,0 +1,3 @@
+D:/qtwork/DesignModel/Structural/Adapter/CMakeFiles/Abapter.dir
+D:/qtwork/DesignModel/Structural/Adapter/CMakeFiles/edit_cache.dir
+D:/qtwork/DesignModel/Structural/Adapter/CMakeFiles/rebuild_cache.dir

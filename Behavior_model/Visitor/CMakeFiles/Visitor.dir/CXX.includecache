@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/qtwork/DesignModel/Behavior_model/Visitor/Element.cpp
+Element.h
+D:/qtwork/DesignModel/Behavior_model/Visitor/Element.h
+Visitor.h
+D:/qtwork/DesignModel/Behavior_model/Visitor/Visitor.h
+iostream
+-
+
+D:/qtwork/DesignModel/Behavior_model/Visitor/Element.h
+
+D:/qtwork/DesignModel/Behavior_model/Visitor/Visitor.cpp
+Visitor.h
+D:/qtwork/DesignModel/Behavior_model/Visitor/Visitor.h
+Element.h
+D:/qtwork/DesignModel/Behavior_model/Visitor/Element.h
+iostream
+-
+
+D:/qtwork/DesignModel/Behavior_model/Visitor/Visitor.h
+
+D:/qtwork/DesignModel/Behavior_model/Visitor/main.cpp
+iostream
+-
+Element.h
+D:/qtwork/DesignModel/Behavior_model/Visitor/Element.h
+Visitor.h
+D:/qtwork/DesignModel/Behavior_model/Visitor/Visitor.h
+

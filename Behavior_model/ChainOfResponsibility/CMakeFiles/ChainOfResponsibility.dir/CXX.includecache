@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/qtwork/DesignModel/Behavior_model/ChainOfResponsibility/Handle.cpp
+iostream
+-
+Handle.h
+D:/qtwork/DesignModel/Behavior_model/ChainOfResponsibility/Handle.h
+
+D:/qtwork/DesignModel/Behavior_model/ChainOfResponsibility/Handle.h
+

@@ -1,0 +1,3 @@
+"C:\Program Files\cmake-3.14.0-rc1-win64-x64\bin\cmake.exe" -E remove -f CMakeFiles\Iterator.dir/objects.a
+D:\QT\QT5\Tools\mingw730_64\bin\ar.exe cr CMakeFiles\Iterator.dir/objects.a @CMakeFiles\Iterator.dir\objects1.rsp
+D:\QT\QT5\Tools\mingw730_64\bin\g++.exe    -Wl,--whole-archive CMakeFiles\Iterator.dir/objects.a -Wl,--no-whole-archive  -o Iterator.exe -Wl,--out-implib,libIterator.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Iterator.dir\linklibs.rsp

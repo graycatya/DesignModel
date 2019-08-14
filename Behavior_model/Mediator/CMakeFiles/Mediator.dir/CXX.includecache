@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/qtwork/DesignModel/Behavior_model/Mediator/Colleage.h
+string
+-
+iostream
+-
+
+D:/qtwork/DesignModel/Behavior_model/Mediator/Mediator.h
+
+D:/qtwork/DesignModel/Behavior_model/Mediator/main.cpp
+iostream
+-
+Mediator.h
+D:/qtwork/DesignModel/Behavior_model/Mediator/Mediator.h
+Colleage.h
+D:/qtwork/DesignModel/Behavior_model/Mediator/Colleage.h
+

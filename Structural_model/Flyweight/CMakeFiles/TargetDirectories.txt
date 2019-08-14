@@ -1,0 +1,3 @@
+D:/qtwork/DesignModel/Structural/Flyweight/CMakeFiles/Flyweight.dir
+D:/qtwork/DesignModel/Structural/Flyweight/CMakeFiles/edit_cache.dir
+D:/qtwork/DesignModel/Structural/Flyweight/CMakeFiles/rebuild_cache.dir

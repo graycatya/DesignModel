@@ -1,0 +1,3 @@
+"C:\Program Files\cmake-3.14.0-rc1-win64-x64\bin\cmake.exe" -E remove -f CMakeFiles\Prototype.dir/objects.a
+D:\QT\QT5\Tools\mingw730_64\bin\ar.exe cr CMakeFiles\Prototype.dir/objects.a @CMakeFiles\Prototype.dir\objects1.rsp
+D:\QT\QT5\Tools\mingw730_64\bin\g++.exe    -Wl,--whole-archive CMakeFiles\Prototype.dir/objects.a -Wl,--no-whole-archive  -o Prototype.exe -Wl,--out-implib,libPrototype.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Prototype.dir\linklibs.rsp

@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/qtwork/DesignModel/Behavior_model/Command/Command.cpp
+Command.h
+D:/qtwork/DesignModel/Behavior_model/Command/Command.h
+Reciever.h
+D:/qtwork/DesignModel/Behavior_model/Command/Reciever.h
+
+D:/qtwork/DesignModel/Behavior_model/Command/Command.h
+
+D:/qtwork/DesignModel/Behavior_model/Command/Invoker.cpp
+Invoker.h
+D:/qtwork/DesignModel/Behavior_model/Command/Invoker.h
+Command.h
+D:/qtwork/DesignModel/Behavior_model/Command/Command.h
+iostream
+-
+
+D:/qtwork/DesignModel/Behavior_model/Command/Invoker.h
+
+D:/qtwork/DesignModel/Behavior_model/Command/Reciever.h
+iostream
+-
+
+D:/qtwork/DesignModel/Behavior_model/Command/main.cpp
+Command.h
+D:/qtwork/DesignModel/Behavior_model/Command/Command.h
+Invoker.h
+D:/qtwork/DesignModel/Behavior_model/Command/Invoker.h
+Reciever.h
+D:/qtwork/DesignModel/Behavior_model/Command/Reciever.h
+iostream
+-
+

@@ -1,0 +1,3 @@
+D:/qtwork/DesignModel/Behavior_model/Strategy/CMakeFiles/Strategy.dir
+D:/qtwork/DesignModel/Behavior_model/Strategy/CMakeFiles/edit_cache.dir
+D:/qtwork/DesignModel/Behavior_model/Strategy/CMakeFiles/rebuild_cache.dir

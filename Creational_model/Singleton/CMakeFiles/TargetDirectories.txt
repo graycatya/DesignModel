@@ -1,0 +1,3 @@
+D:/qtwork/DesignModel/Creational/Singleton/CMakeFiles/Singleton.dir
+D:/qtwork/DesignModel/Creational/Singleton/CMakeFiles/edit_cache.dir
+D:/qtwork/DesignModel/Creational/Singleton/CMakeFiles/rebuild_cache.dir

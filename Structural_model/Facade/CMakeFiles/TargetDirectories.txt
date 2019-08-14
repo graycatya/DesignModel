@@ -1,0 +1,3 @@
+D:/qtwork/DesignModel/Structural/Facade/CMakeFiles/Facade.dir
+D:/qtwork/DesignModel/Structural/Facade/CMakeFiles/edit_cache.dir
+D:/qtwork/DesignModel/Structural/Facade/CMakeFiles/rebuild_cache.dir

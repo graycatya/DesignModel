@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/qtwork/DesignModel/Behavior_model/Observer/Observer.cpp
+Observer.h
+D:/qtwork/DesignModel/Behavior_model/Observer/Observer.h
+Subject.h
+D:/qtwork/DesignModel/Behavior_model/Observer/Subject.h
+iostream
+-
+string
+-
+
+D:/qtwork/DesignModel/Behavior_model/Observer/Observer.h
+Subject.h
+D:/qtwork/DesignModel/Behavior_model/Observer/Subject.h
+string
+-
+
+D:/qtwork/DesignModel/Behavior_model/Observer/Subject.h
+list
+-
+string
+-
+

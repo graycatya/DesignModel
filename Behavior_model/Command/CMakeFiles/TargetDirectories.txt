@@ -1,0 +1,3 @@
+D:/qtwork/DesignModel/Behavior_model/Command/CMakeFiles/Command0.dir
+D:/qtwork/DesignModel/Behavior_model/Command/CMakeFiles/edit_cache.dir
+D:/qtwork/DesignModel/Behavior_model/Command/CMakeFiles/rebuild_cache.dir
