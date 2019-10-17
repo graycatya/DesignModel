@@ -1,5 +1,20 @@
 @startuml Singleton
 
+class Singleton{
+    ..public..
+    + {static} Instance() : Singleton*
+    + {static} Delete() : void
+    --
+    ..protected..
+    # Singleton()
+    # ~Singleton()
+    --
+    ..private..
+    - {static} _instance : Singleton*
+    - {static} my_mutex : mutex
+}
+note left: 单例模式
 
+Singleton --> Singleton : 自关联 >
 
 @enduml
