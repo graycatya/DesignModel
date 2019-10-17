@@ -1,13 +1,24 @@
 @startuml Factory
 
+skinparam BackGroundColor #3c3f41
+
+
+skinparam class {
+    BorderColor #cbd5d6
+    ArrowColor #589df6
+    BackGroundColor #645e4d
+}
+
 class Product{
     + virtual ~Product()
+    ..
     # Product()
 }
 
 class ConcreteProduct{
     + ConcreteProduct()
     + ~ConcreteProduct()
+    ..
 }
 
 
@@ -15,16 +26,19 @@ class ConcreteProduct{
 class Factory{
     + virtual Product* CreateProduct()
     + virtual ~Factory()
+    ..
     # Factory()
+    
 }
 
 class ConcreteFactory{
     + ConcreteFactory()
     + Product* CreateProduct()
     + ~ConcreteFactory()
+    ..
 }
 
-ConcreteFactory .up.> ConcreteProduct
+ConcreteFactory .left.> ConcreteProduct
 ConcreteProduct -up-|> Product
 Factory .left.> Product
 ConcreteFactory -up-|> Factory
