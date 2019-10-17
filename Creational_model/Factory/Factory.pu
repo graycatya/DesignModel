@@ -1,0 +1,37 @@
+@startuml Factory
+
+class Product{
+    + virtual ~Product()
+    # Product()
+}
+
+class ConcreteProduct{
+    + ConcreteProduct()
+    + ~ConcreteProduct()
+}
+
+
+
+class Factory{
+    + virtual Product* CreateProduct()
+    + virtual ~Factory()
+    # Factory()
+}
+
+class ConcreteFactory{
+    + ConcreteFactory()
+    + Product* CreateProduct()
+    + ~ConcreteFactory()
+}
+
+ConcreteFactory .up.> ConcreteProduct
+ConcreteProduct -up-|> Product
+Factory .left.> Product
+ConcreteFactory -up-|> Factory
+
+'排版'
+
+'ConcreteFactory -up-> Product
+'ConcreteProduct -up-> Product
+
+@enduml
