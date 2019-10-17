@@ -10,7 +10,7 @@ skinparam class {
 }
 
 class Product{
-    + virtual ~Product()
+    + ~Product() : virtual
     ..
     # Product()
 }
@@ -22,12 +22,12 @@ class ConcreteProduct{
 }
 
 interface IFactory{
-    + Product* CreateProduct();
+    + CreateProduct() : Product*
 }
 
 class Factory{
-    + virtual Product* CreateProduct()
-    + virtual ~Factory()
+    + CreateProduct() : virtual Product*
+    + ~Factory() : virtual
     ..
     # Factory()
     
@@ -35,7 +35,7 @@ class Factory{
 
 class ConcreteFactory{
     + ConcreteFactory()
-    + Product* CreateProduct()
+    + CreateProduct() : Product*
     + ~ConcreteFactory()
     ..
 }
