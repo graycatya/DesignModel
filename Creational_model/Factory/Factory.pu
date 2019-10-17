@@ -21,7 +21,9 @@ class ConcreteProduct{
     ..
 }
 
-
+interface IFactory{
+    + Product* CreateProduct();
+}
 
 class Factory{
     + virtual Product* CreateProduct()
@@ -42,10 +44,7 @@ ConcreteFactory .left.> ConcreteProduct
 ConcreteProduct -up-|> Product
 Factory .left.> Product
 ConcreteFactory -up-|> Factory
+Factory .up.> IFactory : implement
 
-'排版'
-
-'ConcreteFactory -up-> Product
-'ConcreteProduct -up-> Product
 
 @enduml

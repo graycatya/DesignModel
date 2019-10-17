@@ -1,0 +1,81 @@
+@startuml AbstactFactory
+
+class AbstractProductA{
+    + virtual ~AbstractProductA()
+    --
+    # AbstractProductA()
+}
+note left: 抽象产品基类A
+
+class AbstractProductB{
+    + virtual ~AbstractProductB()
+    --
+    # AbstractProductB()
+}
+note left: 抽象产品基类B
+
+class ProductA1{
+    + ProductA1()
+    + ~ProductA1()
+}
+note left: 抽象产品基类A 实现类A1
+
+class ProductA2{
+    + ProductA2()
+    + ~ProductA2()
+}
+
+note right: 抽象产品基类A 实现类A2
+
+class ProductB1{
+    + ProductB1()
+    + ~ProductB1()
+}
+note left: 抽象产品基类B 实现类B1
+
+class ProductB2{
+    + ProductB2()
+    + ~ProductB2()
+}
+note right: 抽象产品基类B 实现类B2
+
+class AbstractFactory
+{
+    + virtual ~AbstractFactory()
+    + virtual AbstractProductA* CreateProductA()
+    + virtual AbstractProductB* CreateProductB()
+    ..
+    # AbstractFactory()
+}
+note left: 抽象工厂类
+
+class ConcreteFactory1{
+    + ConcreteFactory1()
+    + ~ConcreteFactory1()
+    + AbstractProductA* CreateProductA()
+    + AbstractProductB* CreateProductB()
+}
+
+class ConcreteFactory2{
+    + ConcreteFactory2()
+    + ~ConcreteFactory2()
+    + AbstractProductA* CreateProductA()
+    + AbstractProductB* CreateProductB()
+}
+
+ProductA1 -down-|> AbstractProductA
+ProductA2 -down-|> AbstractProductA
+
+ProductB1 -down-|> AbstractProductB
+ProductB2 -down-|> AbstractProductB
+
+ConcreteFactory1 -up-> AbstractFactory
+ConcreteFactory2 -up-> AbstractFactory
+
+ConcreteFactory1 .down.> ProductB1
+ConcreteFactory1 .down.> ProductA1
+
+ConcreteFactory2 .down.> ProductB2
+ConcreteFactory2 .down.> ProductA2
+
+@enduml
