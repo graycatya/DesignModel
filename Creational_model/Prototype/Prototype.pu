@@ -1,0 +1,18 @@
+@startuml Prototype
+
+class Prototype{
+    + ~Prototype() : virtual
+    + Clone() : virtual  const Prototype*
+    # Prototype()
+}
+
+class ConcretePrototype{
+    + ConcretePrototype()
+    + ConcretePrototype(cp : const ConcretePrototype&)
+    + ~ConcretePrototype()
+    + Clone() const Prototype*
+}
+
+ConcretePrototype -up-|> Prototype
+
+@enduml
