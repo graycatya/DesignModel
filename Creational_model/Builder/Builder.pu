@@ -1,0 +1,43 @@
+@startuml Builder
+
+class Product{
+    + Product()
+    + ~Product()
+    + ProducePart()
+}
+note right: 产品
+
+
+class Builder{
+    + ~Builder() : virtual
+    + BuildPartA(buildPara : const string&) : virtual void
+    + BuildPartB(buildPara : const string&) : virtual void
+    + BuildPartC(buildPara : const string&) : virtual void
+    + GetProduct() : virutal Product* = 0
+    # Builder()
+}
+note right: 建造者基类
+
+class ConcreteBuilder{
+    + ConcreteBuilder()
+    + ~ConcreteBuilder()
+    + BuildPartA(buildPara : const string&) : void
+    + BuildPartB(buildPara : const string&) : void
+    + BuildPartC(buildPara : const string&) : void
+    + GetProduct() : Product* 
+}
+note left: 建造实现类
+
+class Director{
+    + Director(_bld : Builder*)
+    + ~Director()
+    + Construct()
+    - _bld : Builder*
+}
+note left: 监督者
+
+Product .left.> ConcreteBuilder
+ConcreteBuilder -up-|> Builder
+Director *-right- Builder
+
+@enduml

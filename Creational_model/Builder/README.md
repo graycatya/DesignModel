@@ -2,3 +2,4 @@
 
 # Builder建造者模式
 
+![UML](../../out/Creational_model/Builder/Builder/Builder.png)

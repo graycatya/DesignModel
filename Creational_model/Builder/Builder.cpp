@@ -15,7 +15,7 @@ class Product
     private:
 };
 
-
+/*
 class ProductPart
 {
     public:
@@ -24,7 +24,7 @@ class ProductPart
         ProductPart* BuildPart() { return new ProductPart; }
     protected:
     private:
-};
+};*/
 
 class Builder
 {
