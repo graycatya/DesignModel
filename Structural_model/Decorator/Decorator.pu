@@ -31,6 +31,6 @@ class ConcreteDecorator{
 ConcreteComponent -up-|> Component
 Decorator -up-|> Component
 ConcreteDecorator -up-|> Decorator
-Component " * " --* " 1 " Decorator
+Component " * " --* " 1 " Decorator 
 
 @enduml

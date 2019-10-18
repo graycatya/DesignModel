@@ -1,0 +1,32 @@
+@startuml Flyweight
+
+class Flyweight{
+    + ~Flyweight()
+    + Operation() : virtual void
+    + GetIntrinsicState() : string
+    --
+    # Flyweight(GetIntrinsicState : string)
+    --
+    _intrinsicState : string
+}
+
+class ConcreteFlyweight{
+    + ConcreteFlyweight(intrinsicState : string)
+    + ~ConcreteFlyweight()
+    + operation(extrinsicState : const string&)
+}
+
+class FlyweightFactory{
+    + FlyweightFactory()
+    + ~FlyweightFactory()
+    + GetFlyweight(key : const string&) : Flyweight*
+    --
+    - _fly : vector<Flyweight*>
+}
+
+ConcreteFlyweight -up-|> Flyweight
+FlyweightFactory  " 1 " *-down-  " * " Flyweight
+Client -right-> FlyweightFactory : 请求对象消息
+Client .down.> ConcreteFlyweight
+
+@enduml
