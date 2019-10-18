@@ -1,0 +1,24 @@
+@startuml Adapter
+
+class Target{
+    + Target()
+    + ~Target() : virtual 
+    + Request() : virtual void
+}
+
+class Adaptee{
+    + Adaptee()
+    + ~Adaptee()
+    + SpecificRequest() : void
+}
+
+class Adapter{
+    + Adapter()
+    + ~Adapter()
+    + Request() : void
+}
+
+Adapter -up-|> Target : public <
+Adapter -up-|> Adaptee : private <
+
+@enduml

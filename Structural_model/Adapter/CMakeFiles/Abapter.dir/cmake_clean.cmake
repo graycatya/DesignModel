@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Abapter.dir/Adapter.cpp.obj"
+  "CMakeFiles/Abapter.dir/Adapter.cpp.o"
   "Abapter.pdb"
-  "Abapter.exe"
-  "Abapter.exe.manifest"
-  "libAbapter.dll.a"
+  "Abapter"
 )
 
 # Per-language clean rules from dependency scanning.

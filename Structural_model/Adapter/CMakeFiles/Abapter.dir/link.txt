@@ -1,3 +1,1 @@
-"C:\Program Files\cmake-3.14.0-rc1-win64-x64\bin\cmake.exe" -E remove -f CMakeFiles\Abapter.dir/objects.a
-D:\QT\QT5\Tools\mingw730_64\bin\ar.exe cr CMakeFiles\Abapter.dir/objects.a @CMakeFiles\Abapter.dir\objects1.rsp
-D:\QT\QT5\Tools\mingw730_64\bin\g++.exe    -Wl,--whole-archive CMakeFiles\Abapter.dir/objects.a -Wl,--no-whole-archive  -o Abapter.exe -Wl,--out-implib,libAbapter.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Abapter.dir\linklibs.rsp
+/usr/bin/c++    -rdynamic CMakeFiles/Abapter.dir/Adapter.cpp.o  -o Abapter 
