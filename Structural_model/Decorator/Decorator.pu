@@ -1,0 +1,36 @@
+@startuml Decorator
+
+class Component{
+    + ~Component() : virtual
+    + Operation() : virtual void
+    --
+    # Component()
+}
+
+class ConcreteComponent{
+    + ConcreteComponent()
+    + ~ConcreteComponent()
+    + Operation()
+}
+
+class Decorator{
+    + Decorator(com : Component*)
+    + ~Decorator() : virtual
+    + Operation()
+    --
+    # _com : Component*
+}
+
+class ConcreteDecorator{
+    + ConcreteDecorator(com : Component*)
+    + ~ConcreteDecorator()
+    + Operation()
+    + AddedBehavior()
+}
+
+ConcreteComponent -up-|> Component
+Decorator -up-|> Component
+ConcreteDecorator -up-|> Decorator
+Component "* " --* "1 " Decorator
+
+@enduml
