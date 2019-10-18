@@ -1,0 +1,28 @@
+@startuml Facade
+
+class Subsystem1{
+    + Subsystem1()
+    + ~Subsystem1()
+    + Operation()
+}
+
+class Subsystem2{
+    + Subsystem2()
+    + ~Subsystem2()
+    + Operation()
+}
+
+class Facade{
+    + Facade()
+    + ~Facade()
+    + OperationWrapper()
+    --
+    - _subs1 : Subsystem1*
+    - _subs2 : Subsystem2*
+}
+
+Facade ..> Subsystem1
+Facade ..> Subsystem2
+ 
+
+@enduml
