@@ -1,0 +1,30 @@
+@startuml Proxy
+
+class Subject{
+    + ~Subject() : virtual
+    + Request() : virtual void
+    --
+    # Subject()
+}
+
+class ConcreteSubject{
+    + ConcreteSubject()
+    + ~ConcreteSubject()
+    + Request()
+}
+
+class Proxy{
+    + Proxy()
+    + Proxy(sub : Subject*)
+    + ~Proxy()
+    + Request()
+    --
+    - _sub : Subject*
+}
+
+ConcreteSubject -up-|> Subject
+Proxy .up.> Subject
+
+client -right-> Subject
+
+@enduml
