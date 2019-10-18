@@ -2,3 +2,4 @@
 
 # Bridge桥接模式
 
+![UML](../../out/Structural_model/Bridge/Bridge/Bridge.png)

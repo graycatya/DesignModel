@@ -1,0 +1,44 @@
+@startuml Bridge
+
+class AbstractionImp{
+    + ~AbstractionImp() : virtual
+    + Operation() : virtual void 
+    --
+    # AbstractionImp()
+}
+note right: 抽象类
+
+class ConcreteAbstractionImpA{
+    + ConcreteAbstractionImpA()
+    + ~ConcreteAbstractionImpA()
+    + Operation() : virtual void 
+}
+
+class ConcreteAbstractionImpB{
+    + ConcreteAbstractionImpB()
+    + ~ConcreteAbstractionImpB()
+    + Operation() : virtual void 
+}
+
+class Abstraction{
+    + Abstraction(imp : AbstractionImp*)
+    + ~Abstraction()
+    + Operation() : virtual void
+}
+
+class RefinedAbstraction{
+    + RefinedAbstraction(imp : AbstractionImp*)
+    + ~RefinedAbstraction()
+    + Operation() : void
+    --
+    # RefinedAbstraction()
+}
+
+ConcreteAbstractionImpA -up-|> AbstractionImp
+ConcreteAbstractionImpB -up-|> AbstractionImp
+
+
+RefinedAbstraction -up-|> Abstraction
+
+AbstractionImp "*" -right-* "1" Abstraction
+@enduml
