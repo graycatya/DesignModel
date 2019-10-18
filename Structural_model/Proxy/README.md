@@ -10,3 +10,5 @@
 
 
 ![UML](../../out/Structural_model/Proxy/Proxy/Proxy.png)
+
+> 可以看到p的Request请求实际交给了sub来实际执行
