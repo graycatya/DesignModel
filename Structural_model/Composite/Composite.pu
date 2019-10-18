@@ -1,0 +1,33 @@
+@startuml Composite 
+
+class Component{
+    + Component()
+    + ~Component() : virtual 
+    + Operation() : virtual void
+    + Add(Component*) : virtual void
+    + Remove(Component*) : virtual void
+    + GetChild(int) : virtual Component*
+}
+
+class Composite{
+    + Composite()
+    + ~Composite()
+    + Operation() : void
+    + Add(com : Component*) : void
+    + Remove(com : Component*) : void
+    + GetChild(index : int) : Component*
+    --
+    - comVec : vector<Component*>
+}
+
+class Leaf{
+    + Leaf()
+    + ~Leaf()
+    + Operation()
+}
+
+Component " * " --* " 1 " Composite
+Composite -up-|> Component
+Leaf -up-|> Component 
+
+@enduml
