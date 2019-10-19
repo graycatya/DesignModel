@@ -6,5 +6,6 @@
         "iostream": "cpp",
         "*.tcc": "cpp",
         "type_traits": "cpp"
-    }
+    },
+    "C_Cpp.default.configurationProvider": "go2sh.cmake-integration"
 }
