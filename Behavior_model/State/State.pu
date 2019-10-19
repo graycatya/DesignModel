@@ -1,0 +1,42 @@
+@startuml State
+
+class State{
+    + State()
+    + ~State() : virtual
+    + OperationInterface(Context*) : virtual void 
+    + OperationChangeState(Context*) : virtual void
+    --
+    # ChangeState(con : Context*, st : State*) : bool
+}
+
+class ConcreteStateA{
+    + ConcreteStateA()
+    + OperationInterface(con : Context*) : virtual void
+    + OperationChangeState(con : Context*) : virtual void
+}
+
+class ConcreteStateB{
+    + ConcreteStateB()
+    + OperationInterface(con : Context*) : virtual void
+    + OperationChangeState(con : Context*) : virtual void
+}
+
+class Context{
+    + Context()
+    + Context(state : State*)
+    + ~Context()
+    + OprationInterface() : void
+    + OperationChangState() : void
+    --
+    - ChangeState(state : State*) : bool
+    ..
+    - State : friend class
+    - _state : State*
+}
+
+ConcreteStateA -up-|> State
+ConcreteStateB -up-|> State
+
+Context -right- State
+
+@enduml

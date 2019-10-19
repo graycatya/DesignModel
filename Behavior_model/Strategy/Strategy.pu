@@ -1,0 +1,34 @@
+@startuml Strategy 
+
+class Strategy{
+    + Strategy()
+    + ~Strategy() : virtual
+    + AlgrithmInterface() : virtual void
+}
+
+class ConcreteStrategyA{
+    + ConcreteStrategyA()
+    + ~ConcreteStrategyA() : virtual
+    + AlgrithmInterface() : void 
+}
+
+class ConcreteStrategyB{
+    + ConcreteStrategyB()
+    + ~ConcreteStrategyB() : virtual
+    + AlgrithmInterface() : void 
+}
+
+class Context{
+    + Context(stg : Strategy*)
+    + ~Context()
+    + DoAction()
+    --
+    - _stg : Strategy*
+}
+
+ConcreteStrategyA -up-|> Strategy 
+ConcreteStrategyB -up-|> Strategy
+
+Context .right.> Strategy
+
+@enduml
