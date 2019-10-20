@@ -11,6 +11,7 @@ int main(int argc, char* argv[])
     Reciever* rev = new Reciever();
 
     Command* cmd = new ConcreteCommand(rev);
+    
     //请求者
     Invoker* inv = new Invoker(cmd);
     inv->Invoke();

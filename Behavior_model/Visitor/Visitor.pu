@@ -1,0 +1,42 @@
+@startuml Visitor
+
+class Element{
+    + ~Element() : virtual 
+    + Accept(vis : Visitor*) : virtual void
+    --
+    # Element()
+}
+
+class ConcreteElementA{
+    + ConcreteElementA()
+    + ~ConcreteElementA()
+    + Accept(vis : Visitor*)
+}
+
+class ConcreteElementB{
+    + ConcreteElementB()
+    + ~ConcreteElementB()
+    + Accept(vis : Visitor*)
+}
+
+class Visitor{
+    + ~Visitor()
+    + VisitConcreteElementA(elm : Element*) : virtual void
+    + VisitConcreteElementB(elm : Element*) : virtual void
+    --
+    + Visitor()
+}
+
+class ConcreteVisitorA{
+    + ConcreteVisitorA()
+    + ~ConcreteVisitorA()
+    + VisitConcreteElementA(eml : Element*) : void
+    + VisitConcreteElementB(eml : Element*) : void
+}
+
+ConcreteVisitorA -up-|> Visitor
+ConcreteElementA -up-|> Element
+ConcreteElementB -up-|> Element
+Visitor -right- Element
+
+@enduml

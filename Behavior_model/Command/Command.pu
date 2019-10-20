@@ -1,0 +1,38 @@
+@startuml Command
+
+class Reciever{
+    + Reciever()
+    + ~Reciever()
+    + Action() : void
+}
+note left: 接收器
+
+class Command{
+    + ~Command() : virtual 
+    + Excute() : virtual void
+    --
+    # Command()
+}
+
+class ConcreteCommand{
+    + ConcreteCommand(rev : Reciever*)
+    + ~ConcreteCommand()
+    + Excute()
+    --
+    - Reciever* _rev
+}
+
+class Invoker{
+    + Invoker(cmd : Command*)
+    + ~Invoker()
+    + Invoke() : void
+    --
+    - _cmd : Command*
+}
+note left: 请求者
+
+Invoker .right.> Command
+ConcreteCommand -up-|> Command
+ConcreteCommand .left.> Reciever
+
+@enduml

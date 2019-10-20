@@ -1,0 +1,67 @@
+@startuml Mediator
+
+class Mediator{
+    + ~Mediator()
+    + DoActionFromAtoB() : virtual void
+    + DoActionFromAtoA() : virtual void
+    --
+    # Mediator()
+}
+
+class ConcreteMediator{
+    + ConcreteMediator()
+    + ConcreteMediator(clgA : Colleage*, clgB Colleage*)
+    + ~ConcreteMediator()
+    + SetConcreteColleageA(clgA : Colleage*) : void
+    + SetConcreteColleageB(clgB : Colleage*) : void
+    + GetConcreteColleageA() : Colleage*
+    + GetConcreteColleageB() : Colleage*
+    + IntroColleage(clgA : Colleage*, clgB : Colleage*)
+    + DoActionFromAtoB()
+    + DoActionFromAtoA()
+    --
+    - _clgA : Colleage*
+    - _clgB : Colleage*
+}
+
+class Colleage{
+    + ~Colleage() : virtual 
+    + Aciton() : virtual void
+    + SetSate(sdt : const string&) : virtual void
+    + GetState() : virtual string
+    --
+    # Colleage()
+    # Colleage(mdt : Mediator*)
+    # _mdt : Mediator*
+}
+
+class ConcreteColleageA{
+    + ConcreteColleageA()
+    + ConcreteColleageA(mdt : Mediator*)
+    + ~ConcreteColleageA()
+    + Aciton() : void
+    + SetSate(sdt : const string&) : void
+    + GetState() : string
+    --
+    - _sdt : string
+}
+
+class ConcreteColleageB{
+    + ConcreteColleageB()
+    + ConcreteColleageB(mdt : Mediator*)
+    + ~ConcreteColleageB()
+    + Aciton() : void
+    + SetSate(sdt : const string&) : void
+    + GetState() : string
+    --
+    - _sdt : string
+}
+
+ConcreteColleageA -up-|> Colleage
+ConcreteColleageB -up-|> Colleage
+
+ConcreteMediator -up-|> Mediator
+Colleage .left.> Mediator
+ConcreteMediator .left.> Colleage
+
+@enduml

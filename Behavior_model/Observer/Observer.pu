@@ -1,0 +1,62 @@
+@startuml Observer
+
+class Observer{
+    + ~Observer() : virutal
+    + Update(sub : CSubject*) : virtual void
+    + PrintInfo() : virtual void
+    --
+    # Observer()
+    ..
+    # _st : State
+}
+
+class ConcreteObserverA{
+    + GetSubject() : virtual CSubject*
+    + ConcreteObserverA(sub : CSubject*)
+    + ~ConcreteObserverA() : virtual
+    + Update(sub : CSubject*) : void
+    + PrintInfo() : void 
+    --
+    - _sub : CSubject*
+}
+
+class ConcreteObserverB{
+    + GetSubject() : virtual CSubject*
+    + ConcreteObserverB(sub : CSubject*)
+    + ~ConcreteObserverB() : virtual
+    + Update(sub : CSubject*) : void
+    + PrintInfo() : void 
+    --
+    - _sub : CSubject*
+}
+
+class CSubject{
+    + ~CSubject() : virtual 
+    + Attach(obv : Observer*) : virtual void
+    + Detach(obv : Observer*) : virtual void
+    + Notify() : virtual void
+    + SetState(st : const State&)
+    + GetState() : virtual State
+    --
+    # CSubject()
+    --
+    - _obvs : list<Observer*>*
+}
+
+class ConcreteSubject{
+    + ConcreteSubject()
+    + ~ConcreteSubject()
+    + GetState() : State
+    + SetState(st : const State&) : void
+    --
+    - _st : State
+}
+
+ConcreteObserverA -up-|> Observer
+ConcreteObserverB -up-|> Observer
+
+ConcreteSubject -up-|> CSubject
+
+CSubject -right- Observer
+
+@enduml

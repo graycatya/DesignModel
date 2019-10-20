@@ -1,0 +1,33 @@
+@startuml Memento
+
+class Originator{
+    + State : typedef string
+    ..
+    + Originator()
+    + Originator(std : const State&)
+    + ~Originator()
+    + CreateMemento() : Memento*
+    + SetMemento(men : Memento*) : void
+    + RestoreToMemento(mt : Memento*) : void
+    + GetState() : State
+    + SetState(sdt : const State&) : void
+    + PrintState()
+    --
+    - _sdt : State
+    - _mt : Memento*
+}
+
+class Memento{
+    - Originator : friend class
+    - State : typedef string
+    - Memento()
+    - Memento(sdt : const State&)
+    - ~Memento()
+    - SetState(sdt : const State&)
+    - GetState() : State
+    - _sdt : State
+}
+
+Memento -left- Originator
+
+@enduml
