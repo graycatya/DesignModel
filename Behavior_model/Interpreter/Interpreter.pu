@@ -1,0 +1,37 @@
+@startuml Interpreter
+
+class Context_{
+    + Context_()
+    + ~Context_()
+}
+
+class AbstractExpression{
+    + ~AbstractExpression() : virtual
+    + Interpret(c : const Context_&) : virtual void
+    --
+    # AbstractExpression()
+}
+
+class TerminalExpression{
+    + TerminalExpression(statement : const string&)
+    + ~TerminalExpression()
+    + Interpret(c : const Context_&)
+    --
+    - _statement : string
+}
+
+class NonterminalExpression{
+    + NonterminalExpression(expression : AbstractExpression*, times : int)
+    + ~NonterminalExpression()
+    + Interpret(c : const Context_&)
+    --
+    - _expression : AbstractExpression*
+    - _times : int
+}
+
+TerminalExpression -up-|> AbstractExpression
+NonterminalExpression -up-|> AbstractExpression
+
+AbstractExpression -left-> Context_
+
+@enduml

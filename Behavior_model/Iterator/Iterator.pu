@@ -1,0 +1,53 @@
+@startuml Iterator 
+
+class Iterator{
+    + ~Iterator() : virtual 
+    + First() : virtual void
+    + Next() : virtual void
+    + IsDone() : virtual bool
+    + CurrentItem() : virtual Object
+    --
+    # Iterator()
+}
+
+class ConcreteIterator{
+    + ConcreteIterator(ag : Aggregate*, idx : int)
+    + ~ConcreteIterator()
+    + First()
+    + Next()
+    + IsDone()
+    + CurrentItem() : Object
+    --
+    - _ag : Aggregate*
+    - _idx : int
+}
+
+class Aggregate{
+    + ~Aggregate() : virtual
+    + CreateIterator() : virtual Iterator*
+    + GetItem(idx : int) : virtual Object
+    + GetSize() : virtual int
+    -- 
+    # Aggregate()
+}
+
+class ConcreteAggregate{
+    + ConcreteAggregate()
+    + ~ConcreteAggregate()
+    + CreeateIterator() : Iterator*
+    + GetItem(idx : int) : Object
+    + GetSize() : int
+    --
+    - _objs : Object
+}
+
+ConcreteIterator -left-> Aggregate
+ConcreteAggregate -up-> Iterator
+
+ConcreteIterator -up-|> Iterator
+ConcreteAggregate -up-|> Aggregate
+
+
+
+
+@enduml

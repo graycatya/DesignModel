@@ -2,4 +2,4 @@
 
 # Visitor访问者模式
 
-![UML](../../)
+![UML](../../out/Behavior_model/Visitor/Visitor/Visitor.png)

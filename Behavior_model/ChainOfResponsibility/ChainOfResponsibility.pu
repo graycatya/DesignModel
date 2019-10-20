@@ -1,0 +1,34 @@
+@startuml ChainOfResponsibility
+
+class Handle{
+    + ~Handle() : virtual
+    + HandleRequest() : virtual void
+    + SetSuccessor(succ : Handle*) : void
+    + GetSuccessor() : Handle*
+    --
+    # Handle()
+    # Handle(succ : Handle*)
+    --
+    - _succ : Handle*
+}
+
+class ConcreteHandleA{
+    + ConcreteHandleA()
+    + ~ConcreteHandleA()
+    + ConcreteHandleA(succ : Handle*)
+    + HandleRequest()
+}
+
+class ConcreteHandleB{
+    + ConcreteHandleB()
+    + ~ConcreteHandleB()
+    + ConcreteHandleB(succ : Handle*)
+    + HandleRequest()
+}
+
+ConcreteHandleA -up-|> Handle
+ConcreteHandleB -up-|> Handle
+
+Handle --> Handle
+
+@enduml
